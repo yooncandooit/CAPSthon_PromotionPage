@@ -37,7 +37,7 @@ const Guide = styled.h1`
 const GuideRoot = styled.div`
   position: relative;
   width: 100%; /* 필요에 따라 조정 */
-  height: 380px; /* 필요에 따라 조정 */
+  height: 500px; /* 필요에 따라 조정 */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,13 +50,13 @@ const GuideRoot = styled.div`
 const ImageContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 40vh; /* 필요에 따라 조정 */
+  height: 60vh; /* 필요에 따라 조정 */
   display: flex;
   justify-content: center;
   align-items: center;
 
   @media (max-width: 768px) {
-    height: 40vh; /* 모바일 화면에서 높이를 줄여서 이미지가 더 보이도록 조정 */
+    height: 50vh; /* 모바일 화면에서 높이를 줄여서 이미지가 더 보이도록 조정 */
   }
 `;
 
@@ -64,7 +64,7 @@ const ImageContainer = styled.div`
 // 이미지 스타일 설정
 const BackgroundImage = styled.img`
   position: absolute;
-  width: 40%; /* 필요에 따라 조정 */
+  width: 55%; /* 필요에 따라 조정 */
   height: auto; /* 비율을 유지하면서 높이를 자동으로 설정 */
   transition: transform 0.5s ease; /* 애니메이션 효과 추가 */
   border-radius: 10px; /* 이미지의 모서리를 둥글게 설정 */
