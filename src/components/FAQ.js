@@ -90,8 +90,8 @@ const FAQ = ({ className = "" }) => {
     { question: "생성형 AI 제한이 있나요?", answer: "따로 제한되어 있지 않습니다." }
   ];
 
-  return (
-    <Container className={className}>
+  return ( /* id=section 추가 */
+    <Container className={className} id="faq-section">
       <FaqTitle>FAQ</FaqTitle>
       {sections.map((section, index) => (
         <FaqItem key={index}>
