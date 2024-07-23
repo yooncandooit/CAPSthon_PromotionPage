@@ -60,13 +60,14 @@ const ImageContainer = styled.div`
   }
 `;
 
+
 // 이미지 스타일 설정
 const BackgroundImage = styled.img`
   position: absolute;
   width: 40%; /* 필요에 따라 조정 */
   height: auto; /* 비율을 유지하면서 높이를 자동으로 설정 */
   transition: transform 0.5s ease; /* 애니메이션 효과 추가 */
-  border-radius: 20px; /* 이미지의 모서리를 둥글게 설정 */
+  border-radius: px; /* 이미지의 모서리를 둥글게 설정 */
 
   @media (max-width: 768px) {
     width: 70%; /* 모바일 화면에서 이미지 크기를 조정 */
