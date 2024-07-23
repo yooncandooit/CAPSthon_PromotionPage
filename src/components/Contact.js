@@ -6,9 +6,12 @@ const Contact = () => {
       <h2>Contact</h2>
       <div className="contact-link">
         <p>
-          Address: <a href="https://maps.google.com/?q=Dongguk University E265, Seoul, South Korea">Dongguk University E265, Seoul, South Korea</a><br />
-          <a href="https://www.instagram.com/caps_dongguk/">동국대학교 𝘾𝘼𝙋𝙎 Instagram</a> <br />
-          37기 회장 허상준: <a href="mailto:tkdwnsdkdlel@gmail.com">tkdwnsdkdlel@gmail.com</a>
+          <ul>
+            <li>Address: <a href="https://maps.google.com/?q=Dongguk University E265, Seoul, South Korea">Dongguk University E265, Seoul, South Korea</a></li><br />
+            <li><a href="https://www.instagram.com/caps_dongguk/">동국대학교 𝘾𝘼𝙋𝙎 Instagram</a></li> <br />
+            <li>CAPS gmail: <a href="mailto:caps.dongguk@gmail.com">caps.dongguk@gmail.com</a></li><br/>
+            혹은 사담방 문의 주세요 :)
+          </ul>
         </p>
       </div>
     </section>
