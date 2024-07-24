@@ -11,10 +11,12 @@
 nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 nav ul li {
-  display: inline;
   margin: 0 10px;
 }
 
@@ -22,6 +24,80 @@ nav ul li a {
   color: white;
   text-decoration: none;
   cursor: pointer;
+}
+
+.apply-button {
+  margin-left: auto;
+}
+
+.apply-button a {
+  background-color: #FFAA00;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 800;
+}
+
+.apply-button2 {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 20px; /* 버튼과 내용 사이의 간격 */
+}
+
+.apply-button2 a {
+  background-color: #FFAA00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: background-color 0.3s;
+}
+
+.apply-button2 a:hover {
+  background-color: #ff6f00;
+}
+
+#contact-section {
+  padding: 40px 0; /* 상하 패딩을 늘려 여백 확보 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  background-color: #f9f9f9; /* 배경 색상 설정 */
+}
+
+#contact-section h2 {
+  margin-bottom: 30px; /* 하단 마진을 늘려 여백 확보 */
+  font-size: 2em; /* 글자 크기 설정 */
+  color: #333; /* 글자 색상 설정 */
+}
+
+.contact-link ul {
+  list-style-type: none; /* 기본 리스트 스타일 제거 */
+  padding: 0; /* 기본 패딩 제거 */
+}
+
+.contact-link li {
+  margin: 10px 0; /* 상하 마진을 늘려 리스트 항목 간의 여백 확보 */
+  font-size: 1.2em; /* 글자 크기 설정 */
+  color: #555; /* 글자 색상 설정 */
+  text-align: center;
+}
+
+.contact-link a{
+  text-decoration: none;
+  color: #FFAA00;
+  transition: color 0.3s ease; /* 색상 전환 효과 추가 */
+}
+
+.contact-link a:hover{
+  color: #ff6f00;
+}
+
+.contact-link li::before {
+  content: "•"; /* 구분 기호 설정 */
+  color: #007BFF; /* 구분 기호 색상 설정 */
+  display: inline-block;
+  width: 1em; /* 구분 기호와 텍스트 간의 간격 설정 */
+  margin-left: -1em; /* 구분 기호의 위치 설정 */
 }
 
 section {

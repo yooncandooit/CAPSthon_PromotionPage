@@ -28,42 +28,46 @@ const Guide = styled.h1`
   position: relative;
   text-align: center; /* 제목을 가운데 정렬 */
   z-index: 20; /* 제목이 이미지와 아이콘 위에 위치하도록 설정 */
-  margin-bottom: 20px; /* 제목과 이미지 사이의 간격 설정 */
-  padding: 10px; /* 제목에 여백 추가 (선택 사항) */
+  margin-top: 10px; /* 제목과 이미지 사이의 간격 설정 */
+  margin-bottom: 30px; /* 제목과 이미지 사이의 간격 설정 */
+  padding: 0px; /* 제목에 여백 추가 (선택 사항) */
 `;
 
 // 전체 컨테이너 스타일 설정
 const GuideRoot = styled.div`
   position: relative;
   width: 100%; /* 필요에 따라 조정 */
-  height: 100%; /* 필요에 따라 조정 */
+  height: 500px; /* 필요에 따라 조정 */
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #EAEAEA;
   overflow: hidden; /* 자식 요소가 컨테이너를 넘지 않도록 설정 */
-`;
+  padding: 30px 0;
+  `;
 
 // 이미지 컨테이너 스타일 설정
 const ImageContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 40vh; /* 필요에 따라 조정 */
+  height: 60vh; /* 필요에 따라 조정 */
   display: flex;
   justify-content: center;
   align-items: center;
 
   @media (max-width: 768px) {
-    height: 30vh; /* 모바일 화면에서 높이를 줄여서 이미지가 더 보이도록 조정 */
+    height: 50vh; /* 모바일 화면에서 높이를 줄여서 이미지가 더 보이도록 조정 */
   }
 `;
+
 
 // 이미지 스타일 설정
 const BackgroundImage = styled.img`
   position: absolute;
-  width: 40%; /* 필요에 따라 조정 */
+  width: 55%; /* 필요에 따라 조정 */
   height: auto; /* 비율을 유지하면서 높이를 자동으로 설정 */
   transition: transform 0.5s ease; /* 애니메이션 효과 추가 */
+  border-radius: 10px; /* 이미지의 모서리를 둥글게 설정 */
 
   @media (max-width: 768px) {
     width: 70%; /* 모바일 화면에서 이미지 크기를 조정 */
@@ -76,7 +80,7 @@ const SideImage = styled(BackgroundImage)`
   transition: transform 0.5s ease; /* 애니메이션 효과 추가 */
 `;
 
-const imageQueue = ["1-capstone.png", "2-schedule info.png", "3-sessions.png", "4-team building.png", "5-main themes.png", "6-judging criteria.png", "7-how to submit.png", "8-prizes.png"];
+const imageQueue = ["1-capsthon.png", "2-schedule infomation.png", "3-sessions.png", "4-team building.png", "5-main themes.png", "6-judging criteria.png", "7-how to submit.png", "8-prizes.png"];
 
 const GUIDE = ({ className = "", top }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -96,8 +100,8 @@ const GUIDE = ({ className = "", top }) => {
     );
   };
 
-  return (
-    <GuideRoot className={className} top={top}>
+  return ( /* id=section 추가 */
+    <GuideRoot className={className} top={top} id="guide-section">
       <Guide>GUIDE</Guide>
       <ImageContainer>
         <SideImage
