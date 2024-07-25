@@ -16,7 +16,8 @@ const Icon = styled.img`
   justify-content: center;
   align-items: center;
   z-index: 15; /* 아이콘이 이미지 위에 위치하도록 설정 */
-  border:5px solid black;
+  border: 5px solid black;
+
   @media (max-width: 768px) {
     width: 40px; /* 모바일 화면에서 크기 조정 */
     height: 40px; /* 모바일 화면에서 크기 조정 */
@@ -31,12 +32,18 @@ const Guide = styled.h1`
   margin-top: 10px; /* 제목과 이미지 사이의 간격 설정 */
   margin-bottom: 30px; /* 제목과 이미지 사이의 간격 설정 */
   padding: 0px; /* 제목에 여백 추가 (선택 사항) */
+
+  @media (max-width: 768px) {
+    font-size: 1.5em; /* 모바일에서 제목 글자 크기 조정 */
+    margin-bottom: 20px; /* 모바일에서 제목 하단 마진 조정 */
+  }
 `;
 
 // 전체 컨테이너 스타일 설정
 const GuideRoot = styled.div`
   position: relative;
   width: 100%; /* 필요에 따라 조정 */
+  max-width: 100vw; /* 부모 컨테이너의 너비를 넘지 않도록 설정 */
   height: 500px; /* 필요에 따라 조정 */
   display: flex;
   flex-direction: column;
@@ -44,22 +51,27 @@ const GuideRoot = styled.div`
   background-color: #EAEAEA;
   overflow: hidden; /* 자식 요소가 컨테이너를 넘지 않도록 설정 */
   padding: 30px 0;
-  `;
+
+  @media (max-width: 768px) {
+    height: auto; /* 모바일에서 높이 자동 조정 */
+    padding: 20px 10px; /* 모바일에서 상하 패딩 조정 */
+  }
+`;
 
 // 이미지 컨테이너 스타일 설정
 const ImageContainer = styled.div`
   position: relative;
   width: 100%;
+  max-width: 100vw; /* 부모 컨테이너의 너비를 넘지 않도록 설정 */
   height: 60vh; /* 필요에 따라 조정 */
   display: flex;
   justify-content: center;
   align-items: center;
 
   @media (max-width: 768px) {
-    height: 50vh; /* 모바일 화면에서 높이를 줄여서 이미지가 더 보이도록 조정 */
+    height: 40vh; /* 모바일 화면에서 높이를 줄여서 이미지가 더 보이도록 조정 */
   }
 `;
-
 
 // 이미지 스타일 설정
 const BackgroundImage = styled.img`
@@ -80,7 +92,16 @@ const SideImage = styled(BackgroundImage)`
   transition: transform 0.5s ease; /* 애니메이션 효과 추가 */
 `;
 
-const imageQueue = ["1-capsthon.png", "2-schedule infomation.png", "3-sessions.png", "4-team building.png", "5-main themes.png", "6-judging criteria.png", "7-how to submit.png", "8-prizes.png"];
+const imageQueue = [
+  "1-capsthon.png",
+  "2-schedule infomation.png",
+  "3-sessions.png",
+  "4-team building.png",
+  "5-main themes.png",
+  "6-judging criteria.png",
+  "7-how to submit.png",
+  "8-prizes.png",
+];
 
 const GUIDE = ({ className = "", top }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -100,24 +121,42 @@ const GUIDE = ({ className = "", top }) => {
     );
   };
 
-  return ( /* id=section 추가 */
+  return (
     <GuideRoot className={className} top={top} id="guide-section">
       <Guide>GUIDE</Guide>
       <ImageContainer>
         <SideImage
           alt="Previous"
-          src={imageQueue[(currentImageIndex - 1 + imageQueue.length) % imageQueue.length]}
-          style={{ transform: direction === "prev" ? "translateX(-100%)" : "translateX(-100%)", zIndex: 0 }}
+          src={
+            imageQueue[
+              (currentImageIndex - 1 + imageQueue.length) % imageQueue.length
+            ]
+          }
+          style={{
+            transform:
+              direction === "prev" ? "translateX(-100%)" : "translateX(-100%)",
+            zIndex: 0,
+          }}
         />
         <BackgroundImage
           alt="Current"
           src={imageQueue[currentImageIndex]}
-          style={{ transform: direction === "prev" ? "translateX(0%)" : "translateX(0%)", zIndex: 1 }}
+          style={{
+            transform:
+              direction === "prev" ? "translateX(0%)" : "translateX(0%)",
+            zIndex: 1,
+          }}
         />
         <SideImage
           alt="Next"
-          src={imageQueue[(currentImageIndex + 1) % imageQueue.length]}
-          style={{ transform: direction === "next" ? "translateX(100%)" : "translateX(100%)", zIndex: 0 }}
+          src={
+            imageQueue[(currentImageIndex + 1) % imageQueue.length]
+          }
+          style={{
+            transform:
+              direction === "next" ? "translateX(100%)" : "translateX(100%)",
+            zIndex: 0,
+          }}
         />
       </ImageContainer>
       <Icon
