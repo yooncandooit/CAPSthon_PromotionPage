@@ -170,7 +170,7 @@ section {
 
 .schedule-box {
   padding: 20px;
-  border-radius: 50px;
+  border-radius: 8px;
   background-color: antiquewhite;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 600px;
@@ -198,7 +198,7 @@ section {
 .schedule-box p {
   margin: 0;
   color: #282c34;
-  text-align: center;
+  text-align: center; /*시작점 일치 안시키고 중앙 배치*/ 
   /* text-align: left;
   padding-left: 5%;  공백 추가하여 중앙 배치&텍스트 시작점 맞추는 경우 */
 }
