@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CAPSthon_PromotionPage/static/css/main.3a234bf5.css",
+    "main.js": "/CAPSthon_PromotionPage/static/js/main.24f5e6d8.js",
+    "static/js/453.d9d621d5.chunk.js": "/CAPSthon_PromotionPage/static/js/453.d9d621d5.chunk.js",
+    "index.html": "/CAPSthon_PromotionPage/index.html",
+    "main.3a234bf5.css.map": "/CAPSthon_PromotionPage/static/css/main.3a234bf5.css.map",
+    "main.24f5e6d8.js.map": "/CAPSthon_PromotionPage/static/js/main.24f5e6d8.js.map",
+    "453.d9d621d5.chunk.js.map": "/CAPSthon_PromotionPage/static/js/453.d9d621d5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a234bf5.css",
+    "static/js/main.24f5e6d8.js"
+  ]
+}
